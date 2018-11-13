@@ -7,7 +7,7 @@ const SessionTable = (props) => {
         <div>
             <h2>Session History</h2>
             <hr />
-            <Table striped>
+            <Table responsive>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -32,8 +32,8 @@ const SessionTable = (props) => {
                                     <td>{session.session_description}</td>
                                     <td>
 
-                            <Button id={session.id} onClick={props.delete} color="danger">Delete</Button>
-                            <Button id={session.id} onClick={e => props.update(e, session)} color="warning">Update</Button>
+                            <Button outline color="danger" id={session.id} onClick={props.delete} color="danger">Delete</Button>
+                            <Button outline color="primary" id={session.id} onClick={e => props.update(e, session)} color="primary">Update</Button>
 
                                     </td>
                                 </tr>

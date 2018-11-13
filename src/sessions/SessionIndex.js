@@ -73,14 +73,14 @@ class SessionIndex extends React.Component {
         render() {
             const sessions = this.state.sessions.length >= 1 ?
             <SessionTable sessions={this.state.sessions} delete={this.sessionDelete} update={this.setUpdatedSession} /> :
-            <h2>Log a workout to see table</h2>
+            <h2>Log a session to see table</h2>
             return (
               <Container>
                 <Row>
                   <Col md="3">
                     <SessionCreate token ={this.props.token} updateSessionsArray={this.updateSessionsArray} />
                   </Col>
-                  <Col md="9">
+                  <Col md="6">
                     {
                         this.state.updatePressed ? <SessionEdit t={this.state.updatePressed} update={this.sessionUpdate} session={this.state.sessionToUpdate} />
                         : <div></div>

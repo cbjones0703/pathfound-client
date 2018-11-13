@@ -47,7 +47,7 @@ class Login extends Component {
                         <Label for="password">Password</Label>
                         <Input id="li_password" type="password" name="password" placeholder="enter password" onChange={this.handleChange} />
                     </FormGroup>
-                    <Button type="submit"> Submit </Button>
+                    <Button outline color="primary" type="submit" color="primary"> Submit </Button>
                 </Form>
             </div>
         )

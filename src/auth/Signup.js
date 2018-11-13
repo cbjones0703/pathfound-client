@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, /*Modal, ModalHeader, ModalBody*/ } from 'reactstrap';
 
 class Signup extends Component {
     constructor(props) {
@@ -38,6 +38,9 @@ class Signup extends Component {
     render() {
         return (
             <div>
+                 {/* <Modal isOpen={true} >
+                    <ModalHeader>Sign Up!</ModalHeader>
+                    <ModalBody> */}
                 <h1>Sign Up</h1>
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup>
@@ -52,8 +55,10 @@ class Signup extends Component {
                         <Label for="su_email">Email</Label>
                         <Input id="su_email" type="text" name="email" placeholder="enter email" onChange={this.handleChange} />
                     </FormGroup>
-                    <Button type="submit"> Submit </Button>
+                    <Button outline color="primary" type="submit" color="primary"> Submit </Button>
                 </Form>
+            {/* </ModalBody>
+        </Modal> */}
             </div>
         )
     }

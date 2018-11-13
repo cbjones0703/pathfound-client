@@ -9,6 +9,7 @@ import {
     Button
 } from 'reactstrap';
 
+
 class Sitebar extends Component {
     constructor(props) {
         super(props);
@@ -27,7 +28,7 @@ class Sitebar extends Component {
         return (
             <div>
                   <Navbar color="faded" light expand="md">
-                <NavbarBrand href="/">PathFound</NavbarBrand>
+                <NavbarBrand href="/" className="navTitle">PathFound</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>

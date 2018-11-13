@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class SessionCreate extends Component {
     constructor(props) {
@@ -44,6 +44,7 @@ class SessionCreate extends Component {
         })
     }
 
+
     render() {
         return (
             <div>
@@ -68,9 +69,9 @@ class SessionCreate extends Component {
                             </FormGroup>
                             <FormGroup>
                                 <Label for="session_description">Session Description</Label>
-                                <Input id="session_description" type="text" name="session_description" value={this.state.session_description} placeholder="session description" onChange={this.handleChange} />
+                                <Input id="session_description" type="textarea" name="session_description" value={this.state.session_description} placeholder="session description" onChange={this.handleChange} />
                             </FormGroup>
-                            <Button type="submit" color="success">Submit</Button>
+                            <Button outline color="success" type="submit" color="success">Submit</Button>
                 </Form>
             </div>
             )

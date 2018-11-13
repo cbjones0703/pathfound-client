@@ -1,9 +1,12 @@
 .auth-container {
-    margin-top: 5em;
+    margin-top: 3em;
     padding: 2em;
-    border: 1px solid #e5e5e5;
+    border: 2px solid #e5e5e5;
     border-radius: 0.4em;
-    box-shadow: 2px 4px 20px #f0f0f0; 
+    box-shadow: 5px 5px 20px #f0f0f0; 
+    background-image: url('https://www.publicdomainpictures.net/pictures/70000/velka/old-parchment.jpg');  
+    background-size: cover;
+    padding-right: 5em;
 }
 
 .login-col {

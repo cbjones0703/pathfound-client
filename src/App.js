@@ -59,7 +59,7 @@ class App extends Component {
     return (
       <Router>
       <div>
-       <NavBar clickLogout={this.logout} />
+       <NavBar className="navBar" clickLogout={this.logout} />
        {this.protectedViews()}
       </div>
       </Router>
