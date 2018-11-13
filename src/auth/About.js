@@ -12,7 +12,7 @@ export default class About extends React.Component {
     render() {
         return (
             <div>
-                <Button color="secondary" onClick={this.toggle}>What's PathFound?</Button>
+                <Button color="success" onClick={this.toggle}>What's PathFound?</Button>
                 <Fade in={this.state.fadeIn} tag="h5" className="mt-3">
                 Dedicated to helping Pathfinders compile their adventures, PathFound allows users to log and update session information as a convenient way to recount character development. 
                 <br></br>

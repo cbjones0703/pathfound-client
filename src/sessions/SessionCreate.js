@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import APIURL from '../helpers/environment'; 
 
 class SessionCreate extends Component {
@@ -72,7 +72,7 @@ class SessionCreate extends Component {
                                 <Label for="session_description">Session Description</Label>
                                 <Input id="session_description" type="textarea" name="session_description" value={this.state.session_description} placeholder="session description" onChange={this.handleChange} />
                             </FormGroup>
-                            <Button outline color="success" type="submit" color="success">Submit</Button>
+                            <Button outline type="submit" color="success">Submit</Button>
                 </Form>
             </div>
             )

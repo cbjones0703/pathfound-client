@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './index.css'
 import Auth from './auth/Auth';
 import Splash from './home/Splash';
 import NavBar from './home/Navbar';
@@ -58,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <div>
+      <div className="App">
        <NavBar className="navBar" clickLogout={this.logout} />
        {this.protectedViews()}
       </div>

@@ -63,8 +63,8 @@ class SessionEdit extends React.Component {
                                 <Label for="session_description">Session Description</Label>
                                 <Input id="session_description" type="text" name="session_description" value={this.state.session_description} placeholder="session_description" onChange={this.handleChange} />
                             </FormGroup>
-                            <Button outline color="success" type="submit" color="success">Submit</Button>
-                            <Button outline color="primary" type="submit" color="primary">Cancel</Button>
+                            <Button outline type="submit" color="success">Submit</Button>
+                            <Button outline type="submit" color="primary">Cancel</Button>
                         </Form>
                     </ModalBody>
                 </Modal>

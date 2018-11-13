@@ -84,11 +84,11 @@ class CharacterIndex extends React.Component {
         render() {
             const characters = this.state.characters.length >= 1 ?
             <CharacterTable characters={this.state.characters} delete={this.characterDelete} update={this.setUpdatedCharacter} /> :
-            <h2></h2>
+            <h2> </h2>
             return (
                 <div>
                     <Container>
-                    <Button outline color="success" onClick={this.toggle}>{this.props.buttonLabel} Log a Character!</Button>
+                    <Button color="info" onClick={this.toggle}>{this.props.buttonLabel} Log a Character!</Button>
                     </Container>
                     <br></br>
                     <br></br>

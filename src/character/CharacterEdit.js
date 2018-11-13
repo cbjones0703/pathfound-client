@@ -53,8 +53,8 @@ class CharacterEdit extends React.Component {
                     <Label for="character_class">Character Class</Label>
                     <Input id="character_class" type="text" name="character_class" value={this.state.character_class} placeholder="enter character class here" onChange={this.handleChange} />
                 </FormGroup>
-                            <Button outline color="success" type="submit" color="success">Submit</Button>
-                            <Button outline color="primary" type="submit" color="primary">Cancel</Button>
+                            <Button outline type="submit" color="success">Submit</Button>
+                            <Button outline type="submit" color="primary">Cancel</Button>
                         </Form>
                     </ModalBody>
                 </Modal>

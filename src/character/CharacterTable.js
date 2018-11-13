@@ -28,8 +28,8 @@ const CharacterTable = (props) => {
                                     <td>{character.character_class}</td>
                                     <td>
 
-                            <Button outline color="danger" id={character.id} onClick={props.delete} color="danger">Delete</Button>
-                            <Button outline color="primary" id={character.id} onClick={e => props.update(e, character)} color="primary">Update</Button>
+                            <Button outline id={character.id} onClick={props.delete} color="danger">Delete</Button>
+                            <Button outline id={character.id} onClick={e => props.update(e, character)} color="primary">Update</Button>
 
                                     </td>
                                 </tr>

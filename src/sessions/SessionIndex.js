@@ -81,7 +81,7 @@ class SessionIndex extends React.Component {
                   <Col md="3">
                     <SessionCreate token ={this.props.token} updateSessionsArray={this.updateSessionsArray} />
                   </Col>
-                  <Col md="6">
+                  <Col md="3">
                     {
                         this.state.updatePressed ? <SessionEdit t={this.state.updatePressed} update={this.sessionUpdate} session={this.state.sessionToUpdate} />
                         : <div></div>
