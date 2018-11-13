@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import APIURL from '../helpers/environment'; 
 
 class SessionCreate extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class SessionCreate extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        fetch(`http://localhost:3000/api/log/`, {
+        fetch(`${APIURL}/api/log/`, {
             method: 'POST',
             body: JSON.stringify({ log: this.state }),
             headers: new Headers({

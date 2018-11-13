@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 import CharacterTable from './CharacterTable' 
 import CharacterEdit from './CharacterEdit'; 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import APIURL from '../helpers/environment'; 
 
 
 
@@ -34,7 +35,7 @@ class CharacterIndex extends React.Component {
     }
 
     fetchCharacters = () => {
-        fetch("http://localhost:3000/api/character", {
+        fetch(`${APIURL}/api/character`, {
             method: 'GET',
             headers: new Headers({
               'Content-Type': 'application/json',
@@ -48,7 +49,7 @@ class CharacterIndex extends React.Component {
         }
 
     characterDelete = (event) => {
-        fetch(`http://localhost:3000/api/character/${event.target.id}`, {
+        fetch(`${APIURL}/api/character/${event.target.id}`, {
       method: 'DELETE',
       body: JSON.stringify({ character: { id: event.target.id } }),
       headers: new Headers({
@@ -59,7 +60,7 @@ class CharacterIndex extends React.Component {
     .then((res) => this.fetchCharacters())
   }
     characterUpdate = (event, character) => {
-        fetch(`http://localhost:3000/api/character/${character.id}`, {
+        fetch(`${APIURL}/api/character/${character.id}`, {
             method: 'PUT',
             body: JSON.stringify({ character: character }),
             headers: new Headers({

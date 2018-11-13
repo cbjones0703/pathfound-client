@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import APIURL from '../helpers/environment'
 
 class CharacterCreate extends Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class CharacterCreate extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        fetch(`http://localhost:3000/api/character/`, {
+        fetch(`${APIURL}/api/character/`, {
             method: 'POST',
             body: JSON.stringify({ character: this.state }),
             headers: new Headers({

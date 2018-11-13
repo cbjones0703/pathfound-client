@@ -3,6 +3,7 @@ import SessionCreate from './SessionCreate';
 import { Container, Row, Col } from 'reactstrap';
 import SessionTable from './SessionTable' 
 import SessionEdit from './SessionEdit'; 
+import APIURL from '../helpers/environment'; 
 
 
 class SessionIndex extends React.Component {
@@ -24,7 +25,7 @@ class SessionIndex extends React.Component {
     }
 
     fetchSessions = () => {
-        fetch("http://localhost:3000/api/log", {
+        fetch(`${APIURL}/api/log`, {
             method: 'GET',
             headers: new Headers({
               'Content-Type': 'application/json',
@@ -38,7 +39,7 @@ class SessionIndex extends React.Component {
         }
 
     sessionDelete = (event) => {
-        fetch(`http://localhost:3000/api/log/${event.target.id}`, {
+        fetch(`${APIURL}/api/log/${event.target.id}`, {
       method: 'DELETE',
       body: JSON.stringify({ log: { id: event.target.id } }),
       headers: new Headers({
@@ -49,7 +50,7 @@ class SessionIndex extends React.Component {
     .then((res) => this.fetchSessions())
   }
     sessionUpdate = (event, session) => {
-        fetch(`http://localhost:3000/api/log/${session.id}`, {
+        fetch(`${APIURL}/api/log/${session.id}`, {
             method: 'PUT',
             body: JSON.stringify({ log: session }),
             headers: new Headers({
