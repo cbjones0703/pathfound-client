@@ -56,7 +56,7 @@ class Signup extends Component {
                         <Label for="su_email">Email</Label>
                         <Input id="su_email" type="text" name="email" placeholder="enter email" onChange={this.handleChange} />
                     </FormGroup>
-                    <Button outline color="primary" type="submit" color="primary"> Submit </Button>
+                    <Button outline type="submit" color="primary"> Submit </Button>
                 </Form>
             {/* </ModalBody>
         </Modal> */}

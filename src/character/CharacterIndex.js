@@ -88,7 +88,7 @@ class CharacterIndex extends React.Component {
             return (
                 <div>
                     <Container>
-                    <Button color outline="success" color="success" onClick={this.toggle}>{this.props.buttonLabel} Log a Character!</Button>
+                    <Button outline color="success" onClick={this.toggle}>{this.props.buttonLabel} Log a Character!</Button>
                     </Container>
                     <br></br>
                     <br></br>
@@ -111,7 +111,7 @@ class CharacterIndex extends React.Component {
               </Container>
               </ModalBody>
               <ModalFooter>
-            <Button color outline="secondary" color="secondary" onClick={this.toggle}>Cancel</Button>
+            <Button outline color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
               </Modal>
               </div>

@@ -58,7 +58,7 @@ class CharacterCreate extends Component {
                     <Label for="character_class">Character Class</Label>
                     <Input id="character_class" type="text" name="character_class" value={this.state.class} placeholder="enter character class here" onChange={this.handleChange} />
                 </FormGroup>
-                <Button outline color="success" type="submit" color="success">Submit</Button>
+                <Button outline type="submit" color="success">Submit</Button>
                 </Form>
             </div>
         )
