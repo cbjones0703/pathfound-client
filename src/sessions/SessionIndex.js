@@ -3,6 +3,7 @@ import SessionCreate from './SessionCreate';
 import { Container, Row, Col } from 'reactstrap';
 import SessionTable from './SessionTable' 
 import SessionEdit from './SessionEdit'; 
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import APIURL from '../helpers/environment'; 
 
 
@@ -12,8 +13,15 @@ class SessionIndex extends React.Component {
         this.state = {
             sessions: [],
             updatePressed: false,
-            sessionToUpdate: {}
-        }
+            sessionToUpdate: {},
+            modal: false
+        }; 
+        this.toggle = this.toggle.bind(this);
+    }
+    toggle() {
+      this.setState({
+        modal: !this.state.modal
+      });
     }
 
     componentWillMount() {
@@ -74,25 +82,45 @@ class SessionIndex extends React.Component {
         render() {
             const sessions = this.state.sessions.length >= 1 ?
             <SessionTable sessions={this.state.sessions} delete={this.sessionDelete} update={this.setUpdatedSession} /> :
-            <h2>Log a session to see table</h2>
+            <h2></h2>
             return (
+              <div>
+                 <Container>
+                    <Button color="primary" onClick={this.toggle}>{this.props.buttonLabel} Log a Session!</Button>
+                    </Container>
+                    <br></br>
+                    <br></br>
+                    <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggle}>Session Log</ModalHeader>
+          <ModalBody>        
               <Container>
                 <Row>
-                  <Col md="3">
+                  <Col md="6">
                     <SessionCreate token ={this.props.token} updateSessionsArray={this.updateSessionsArray} />
                   </Col>
-                  <Col md="3">
+                </Row>
+              </Container>
+              </ModalBody>
+              <ModalFooter>
+            <Button outline color="secondary" onClick={this.toggle}>Cancel</Button>
+          </ModalFooter>
+          </Modal>
+          <Container>
+          <Col md="6">
                     {
                         this.state.updatePressed ? <SessionEdit t={this.state.updatePressed} update={this.sessionUpdate} session={this.state.sessionToUpdate} />
                         : <div></div>
                     }
                   </Col>
-                </Row>
-                {sessions}
-              </Container>
+            <Row>
+              <Col md="12">
+              {sessions}
+              </Col>
+            </Row>
+          </Container>
+              </div>
             )
           }
-
 }
 
 

@@ -43,15 +43,15 @@ class CharacterEdit extends React.Component {
                         <Form onSubmit={this.handleSubmit} >
                         <FormGroup>
                     <Label for="character_name">Character Name</Label>
-                    <Input id="character_name" type="text" name="character_name" value={this.state.character_name} placeholder="enter character name here" onChange={this.handleChange} />
+                    <Input id="character_name" type="text" name="character_name" value={this.state.character_name} placeholder="enter character name" onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup>
                     <Label for="character_race">Character Race</Label>
-                    <Input id="character_race" type="text" name="character_race" value={this.state.character_race} placeholder="enter character race here" onChange={this.handleChange} />
+                    <Input id="character_race" type="text" name="character_race" value={this.state.character_race} placeholder="enter character race" onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup>
                     <Label for="character_class">Character Class</Label>
-                    <Input id="character_class" type="text" name="character_class" value={this.state.character_class} placeholder="enter character class here" onChange={this.handleChange} />
+                    <Input id="character_class" type="text" name="character_class" value={this.state.character_class} placeholder="enter character class" onChange={this.handleChange} />
                 </FormGroup>
                             <Button outline type="submit" color="success">Submit</Button>
                             <Button outline type="submit" color="primary">Cancel</Button>

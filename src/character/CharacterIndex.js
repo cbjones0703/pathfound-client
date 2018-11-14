@@ -87,8 +87,11 @@ class CharacterIndex extends React.Component {
             <h2> </h2>
             return (
                 <div>
+                  <br></br>
+                  <br></br>
+                  <br></br>
                     <Container>
-                    <Button color="info" onClick={this.toggle}>{this.props.buttonLabel} Log a Character!</Button>
+                    <Button color="primary" onClick={this.toggle}>{this.props.buttonLabel} Log a Character!</Button>
                     </Container>
                     <br></br>
                     <br></br>

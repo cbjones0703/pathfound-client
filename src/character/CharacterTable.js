@@ -7,7 +7,7 @@ const CharacterTable = (props) => {
         <div>
             <h2>Characters</h2>
             <hr />
-            <Table striped>
+            <Table responsive>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -21,6 +21,7 @@ const CharacterTable = (props) => {
                     {
                         props.characters.map((character, id) => {
                             return (
+                                
                                 <tr key={id}>
                                     <th scope="row">{character.id}</th>
                                     <td>{character.character_name}</td>
@@ -33,6 +34,7 @@ const CharacterTable = (props) => {
 
                                     </td>
                                 </tr>
+                                
                             )
                         })
                     }

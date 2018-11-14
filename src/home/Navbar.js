@@ -6,8 +6,10 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    Button
+    Button,
+    Container
 } from 'reactstrap';
+import './Navbar.css';
 
 
 class Sitebar extends Component {
@@ -26,19 +28,23 @@ class Sitebar extends Component {
 
     render () {
         return (
-            <div>
+            
+            
+                <Container className="navbar-container">
                   <Navbar color="faded" light expand="md">
                 <NavbarBrand href="/" className="navTitle">PathFound</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                 <NavItem>
-                    <Button onClick={() => this.props.clickLogout()}>Logout</Button>
+                    <Button onClick={() => this.props.clickLogout()}>Sign Out</Button>
                 </NavItem>
                 </Nav>
                 </Collapse>
                 </Navbar>
-            </div>
+                </Container>
+            
+            
         )
     }
 }

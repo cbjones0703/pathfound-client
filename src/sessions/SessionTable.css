@@ -1,12 +1,12 @@
- .navbar-container {
-    font-family: 'Cabin Sketch'; 
+.table-container {
+    padding: 2em;
     border: 2px solid #906218;
-    border-radius: 0.3em;
-    box-shadow: 8px 8px 20px  black; 
+    border-radius: 0.4em;
+    box-shadow: 8px 8px 20px black; 
     background-image: url('https://www.publicdomainpictures.net/pictures/70000/velka/old-parchment.jpg');  
     background-size: cover;
     padding-right: 5em;
-    height: 5em;
-    width: 100%;
-} 
+    height: auto;
+    width: auto; 
+}
 

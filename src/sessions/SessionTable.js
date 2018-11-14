@@ -1,5 +1,6 @@
 import React from 'react';
-import { Table, Button } from 'reactstrap';
+import './SessionTable.css';
+import { Table, Button, Container } from 'reactstrap';
 
 const SessionTable = (props) => {
 
@@ -7,10 +8,11 @@ const SessionTable = (props) => {
         <div>
             <h2>Session History</h2>
             <hr />
-            <Table striped>
+            <Table responsive>
+            <Container className="table-container">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>id</th>
                         <th>Session Title</th>
                         <th>Date</th>
                         <th>Character</th>
@@ -37,10 +39,12 @@ const SessionTable = (props) => {
 
                                     </td>
                                 </tr>
+                                
                             )
                         })
                     }
                 </tbody>
+                </Container>
             </Table>
         </div>
     );
