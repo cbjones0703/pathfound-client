@@ -31,6 +31,8 @@ class Login extends Component {
             this.props.setToken(data.sessionToken)
             localStorage.setItem('username', data.user.username);
             localStorage.setItem('owner', data.user.id);  
+        })   .catch(err => {
+            console.log(err);
         })
         event.preventDefault()
     }
