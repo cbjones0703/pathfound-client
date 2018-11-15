@@ -34,7 +34,7 @@ const SessionTable = (props) => {
                                     <td>{session.session_description}</td>
                                     <td>
 
-                            <Button outline id={session.id} onClick={props.delete} color="danger">Delete</Button>
+                            <Button outline id={session.id} onClick={props.delete} color="secondary">Remove</Button>
                             <Button outline id={session.id} onClick={e => props.update(e, session)} color="primary">Update</Button>
 
                                     </td>

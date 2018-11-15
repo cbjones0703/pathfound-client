@@ -60,7 +60,7 @@ class SessionIndex extends React.Component {
     sessionUpdate = (event, session) => {
         fetch(`${APIURL}/api/log/${session.id}`, {
             method: 'PUT',
-            body: JSON.stringify({ log: session }),
+            body: JSON.stringify({ session: session  }),
             headers: new Headers({
               'Content-Type': 'application/json',
               'Authorization': this.props.token
@@ -86,12 +86,12 @@ class SessionIndex extends React.Component {
             return (
               <div>
                  <Container>
-                    <Button color="primary" onClick={this.toggle}>{this.props.buttonLabel} Log a Session!</Button>
+                    <Button color="success" onClick={this.toggle}>{this.props.buttonLabel} Log a Session!</Button>
                     </Container>
                     <br></br>
                     <br></br>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Session Log</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Session Manager</ModalHeader>
           <ModalBody>        
               <Container>
                 <Row>

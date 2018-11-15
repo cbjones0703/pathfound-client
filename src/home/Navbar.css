@@ -1,5 +1,5 @@
  .navbar-container {
-    font-family: 'Cabin Sketch'; 
+    font-family: 'Montserrat Subrayada', bold;
     border: 2px solid #906218;
     border-radius: 0.3em;
     box-shadow: 8px 8px 20px  black; 
@@ -8,5 +8,6 @@
     padding-right: 5em;
     height: 5em;
     width: 100%;
+    text-shadow: 2px 2px 5px; 
 } 
 

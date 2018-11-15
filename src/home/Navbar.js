@@ -32,7 +32,7 @@ class Sitebar extends Component {
             
                 <Container className="navbar-container">
                   <Navbar color="faded" light expand="md">
-                <NavbarBrand href="/" className="navTitle">PathFound</NavbarBrand>
+                <NavbarBrand href="/" className="navTitle"><h1>PathFound</h1></NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>

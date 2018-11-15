@@ -18,7 +18,6 @@ const Auth = (props) => {
                 <Col md="3">
                     <Signup setToken={props.setToken}/>
                 </Col>
-                <br></br>
                 <Col md="3" className="login-col">
                     <Login setToken={props.setToken}/>
                 </Col>

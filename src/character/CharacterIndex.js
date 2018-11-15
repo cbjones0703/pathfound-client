@@ -91,12 +91,12 @@ class CharacterIndex extends React.Component {
                   <br></br>
                   <br></br>
                     <Container>
-                    <Button color="primary" onClick={this.toggle}>{this.props.buttonLabel} Log a Character!</Button>
+                    <Button color="success" onClick={this.toggle}>{this.props.buttonLabel} Log a Character!</Button>
                     </Container>
                     <br></br>
                     <br></br>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Character Log</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Character Manager</ModalHeader>
           <ModalBody>
               <Container>
                 <Row>

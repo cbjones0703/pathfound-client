@@ -49,7 +49,7 @@ class SessionCreate extends Component {
     render() {
         return (
             <div>
-                <h3>Log a Session!</h3>
+                <h3></h3>
                 <hr />
                 <Form onSubmit={this.handleSubmit} >
                 <FormGroup>

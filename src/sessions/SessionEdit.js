@@ -45,7 +45,7 @@ class SessionEdit extends React.Component {
                         <Form onSubmit={this.handleSubmit} >
                             <FormGroup>
                                 <Label for="session_title">Session Title</Label>
-                                <Input id="session_title" type="text" name="session_title" value={this.state.session_title} placeholder="enter session_title" onChange={this.handleChange} />
+                                <Input id="session_title" type="text" name="session_title" value={this.state.session_title} placeholder="session title" onChange={this.handleChange} />
                             </FormGroup>
                             <FormGroup>
                                 <Label for="date" >Date</Label>
@@ -61,7 +61,7 @@ class SessionEdit extends React.Component {
                             </FormGroup>
                             <FormGroup>
                                 <Label for="session_description">Session Description</Label>
-                                <Input id="session_description" type="text" name="session_description" value={this.state.session_description} placeholder="session_description" onChange={this.handleChange} />
+                                <Input id="session_description" type="text" name="session_description" value={this.state.session_description} placeholder="session description" onChange={this.handleChange} />
                             </FormGroup>
                             <Button outline type="submit" color="success">Submit</Button>
                             <Button outline type="submit" color="primary">Cancel</Button>
